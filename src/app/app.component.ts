@@ -8,7 +8,8 @@ import { CountService } from './shared/count.service';
 })
 export class AppComponent {
   title = 'stackblitz';
+
   constructor(
     public countService: CountService
-  ){}
+  ) {}
 }
