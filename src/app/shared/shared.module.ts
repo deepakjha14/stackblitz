@@ -7,13 +7,16 @@ import { CountService } from './count.service';
   imports: [
     CommonModule
   ],
-  providers: [CountService]
+  providers: [],
+  exports: [
+    CommonModule
+  ]
 })
 export class SharedModule { 
-  // static forRoot(): ModuleWithProviders<SharedModule> {
-  //   return {
-  //     ngModule: SharedModule,
-  //     providers: [CountService]
-  //   }
-  // }
+  static forRoot(): ModuleWithProviders<SharedModule> {
+    return {
+      ngModule: SharedModule,
+      providers: [CountService]
+    }
+  }
 }
