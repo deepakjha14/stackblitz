@@ -1,6 +1,11 @@
-<div style="display: flex; flex-direction: row; align-items: center;">
-    <h1>forRoot()</h1> <strong>pattern in Angular</strong>
+Addition game for <strong>afterRender</strong> and <strong>afterNextRender</strong>
+<br/>
+<br/>
+{{firstOps}} + <input type="number" [(ngModel)]="secondNumber"> = {{randomNumber}}
+<br/>
+<br/>
+<button (click)="checkMaths()">Test</button>
+<div *ngIf="gameState()>0" id="gameStateDiv">
+    Congrats you won {{gameState()}} times
 </div>
-Count clicks <span style="color: red;">{{countService.clickCount}}</span> in Parent component
-<hr/>
-<router-outlet></router-outlet>
+<div style="height:24px;width:0%; background-color: green;" id="progressBar"></div>
