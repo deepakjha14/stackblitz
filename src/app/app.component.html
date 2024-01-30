@@ -1,11 +1,29 @@
 Addition game for <strong>afterRender</strong> and <strong>afterNextRender</strong>
 <br/>
+<h3>Application overview,</h3>
+<ul>
+    <li>    
+        Answer basic addition problems,
+    </li>
+    <li>    
+        Aafter every five consecutive correct answers the app will reset to 0,
+    </li>
+    <li>    
+        Every wrong answer will reset the app to 0,
+    </li>
+    <li>    
+        After every correct answer the progress bar will increase by 20%
+    </li>
+</ul>
 <br/>
 {{firstOps}} + <input type="number" [(ngModel)]="secondNumber"> = {{randomNumber}}
 <br/>
 <br/>
 <button (click)="checkMaths()">Test</button>
+<br/>
+<br/>
 <div *ngIf="gameState()>0" id="gameStateDiv">
     Congrats you won {{gameState()}} times
 </div>
+<br/>
 <div style="height:24px;width:0%; background-color: green;" id="progressBar"></div>
